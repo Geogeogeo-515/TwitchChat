@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Speedrun - Dream Style</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stream-container">
+        <div class="video-section">
+            <div class="video-container">
+                <video id="streamVideo" loop muted autoplay>
+                    <source src="Rick Roll.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="stream-overlay">
+                    <div class="stream-status">
+                        <div class="status-item">
+                            <span class="status-label">LIVE</span>
+                            <span class="status-time" id="streamTime">00:00:00</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">PB</span>
+                            <span class="pb-time">14:52</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">WR Pace</span>
+                            <span class="wr-diff" id="wrDiff">-0:23</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stream-info">
+                <div class="streamer-info">
+                    <img src="images.png" class="streamer-avatar" alt="Streamer Avatar">
+                    <div class="streamer-details">
+                        <h2 class="stream-title">🔥 Minecraft Any% Speedruns | Sub 14:30 Attempts!</h2>
+                        <div class="streamer-name">SpeedRunner Pro</div>
+                        <div class="stream-category">Minecraft</div>
+                    </div>
+                </div>
+                <div class="stream-stats">
+                    <div class="stat">
+                        <span id="viewerCount">0</span> viewers
+                    </div>
+                    <div class="stat">
+                        <span>150K</span> followers
+                    </div>
+                    <div class="stat">
+                        <span id="attemptCount">0</span> attempts today
+                    </div>
+                </div>
+                <div class="stream-description">
+                    <p>Grinding for new WR! Currently practicing nether routing and blind travel strats. !pb !wr !seed !texture</p>
+                    <div class="speedrun-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Personal Best:</span>
+                            <span class="stat-value">14:52</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">World Record:</span>
+                            <span class="stat-value">14:29</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Today's Best:</span>
+                            <span class="stat-value" id="todayBest">15:43</span>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Speedrunning</span>
+                        <span class="tag">Minecraft</span>
+                        <span class="tag">Any%</span>
+                        <span class="tag">RSG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Stream Chat</h2>
+                    <div class="chat-info">
+                        <div class="chat-mode">Sub-Only Mode</div>
+                        <div class="chat-options">
+                            <button id="toggleTheme">🌙</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="run-status" id="runStatus">
+                    <div class="status-header">Current Run</div>
+                    <div class="split-times">
+                        <div class="split">
+                            <span class="split-name">Nether Entry</span>
+                            <span class="split-time" id="netherSplit">2:45</span>
+                        </div>
+                        <div class="split">
+                            <span class="split-name">Fortress</span>
+                            <span class="split-time" id="fortressSplit">4:32</span>
+                        </div>
+                        <div class="split">
+                            <span class="split-name">Stronghold</span>
+                            <span class="split-time" id="strongholdSplit">11:21</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages"></div>
+                <div class="active-events" id="activeEvents">
+                    <!-- Active events shown here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Send a message...">
+                    <button id="sendButton">Chat</button>
+                </div>
+            </div>
+            <div class="event-tracker">
+                <div class="event-header">
+                    <h3>Run Stats</h3>
+                </div>
+                <div class="run-tracker" id="runTracker">
+                    <div class="tracker-stat">
+                        <span class="tracker-label">Sub 15 Runs</span>
+                        <span class="tracker-value" id="sub15Count">3</span>
+                    </div>
+                    <div class="tracker-stat">
+                        <span class="tracker-label">Good Seeds</span>
+                        <span class="tracker-value" id="goodSeedCount">12</span>
+                    </div>
+                    <div class="tracker-stat">
+                        <span class="tracker-label">Dragon Fights</span>
+                        <span class="tracker-value" id="dragonCount">8</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
